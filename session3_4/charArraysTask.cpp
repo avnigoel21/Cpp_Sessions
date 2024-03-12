@@ -14,8 +14,8 @@ int main(){
 
     char arr[n+1];
 
-    cin.getline(arr, n);
-    cin.ignore();
+    cin.getline(arr, n+1);
+    //cin.ignore();
 
     int i = 0;
     int currLen = 0, maxLen = 0;
@@ -38,12 +38,10 @@ int main(){
         i++;
 
     }
-
     cout << maxLen << endl;
-    for(int i = 0 ; i < maxLen ; i++){
-        cout << arr[i+maxSt];
+    for (int i = 0; i < maxLen; i++) {
+        cout << arr[maxSt + i];
     }
-
 
 
     return 0;
