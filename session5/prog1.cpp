@@ -4,6 +4,24 @@
 
 using namespace std;
 
+
+string reverseWords(string s1){
+    string ans;
+    int len = s1.length();
+    int a;
+
+    for(int i = len-1 ; i>=0 ; i--){
+        if(s1[i] == ' '){
+            a = len - i;
+            len = i - 1;
+            ans.append(s1.substr(i+1 , a));
+            ans.append(" ");
+        }
+    }
+    ans.append(s1.substr(0, len+1));
+    return ans;
+}
+
 int main(){
 
     //string str;
@@ -36,7 +54,7 @@ int main(){
     //     cout<< "string are equal";
     // }
 
-    string s1 = "445637";
+   // string s1 = "445637";
 
    // sort(s1.begin(), s1.end())  // sort in ascending order
     // sort(s1.begin(), s1.end(), greater<int>()); // sort in descending order
@@ -74,12 +92,39 @@ int main(){
     // }
     // cout<< maxF << " " << ans << endl;
 
+    // reverse words in a given string
+    //         0123456789
+    // // s = "i like the"
 
-
-
+    // len = 9
+ 
+    // word = "the"  // len - i
+    // ans= " "
 
     
+    // "program very much'
+
+    // ans = "much very program this like i" 
+
+
+    string s = "i like this program very much";
+
+
+    string reverse = reverseWords(s);
+
+    cout<<reverse<<endl;
+
+
+//  int freq[26] = {0};
+    
     return 0;
+
+    // remove duplicates from a strings
+    // "abBcddeFfgHghiBJA"
+
+// #include <unordered_set>
+
+
 
 
 
